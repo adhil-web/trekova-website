@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TREKOVA - Beyond the Boundaries</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Scroll Progress Indicator -->
+<div class="scroll-indicator" id="scrollIndicator"></div>
+
+<!-- Header and Navigation -->
+<header>
+  <img src="images/logo.png" alt="Trekova Logo" class="logo">
+
+  <!-- Mobile Menu Button -->
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <nav id="nav-menu">
+    <ul id="nav-list">
+      <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
+      <li><a href="#about" onclick="scrollToSection('about')">About Us</a></li>
+      <li><a href="#tours" onclick="scrollToSection('tours')">Tour Packages</a></li>
+      <li><a href="#why" onclick="scrollToSection('why')">Why Choose Us</a></li>
+      <li><a href="#offers" onclick="scrollToSection('offers')">What We Offer</a></li>
+      <li><a href="#contact" onclick="scrollToSection('contact')">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Home Section -->
+<section id="home" class="home">
+  <div class="home-content">
+    <div class="left">
+      <h1><span class="highlight">TREKOVA</span><br>Beyond the Boundaries</h1>
+      <p>Some journeys aren't just about the destination. They're about who you travel with, why you travel, and how it changes you.</p>
+      <p>At TREKOVA, we design trips that go deeper. From college explorations that spark curiosity, to honeymoons that celebrate love, and ladies-only escapes where freedom and sisterhood come first.</p>
+
+      <a href="https://wa.me/917025595098" class="whatsapp-button">
+        <img src="images/whatsapp.png" alt="WhatsApp Icon"> Enquire Now!
+      </a>
+    </div>
+
+    <div class="right">
+      <img src="images/1.png" alt="Traveler Woman">
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+  <div class="home-content">
+    <div class="left">
+      <h1>Welcome to <span class="highlight">TREKOVA</span></h1>
+      <p>At TREKOVA, we don't just plan trips. We craft journeys that become memories — and memories that stay with you forever.</p>
+      <p>Based in Kerala, TREKOVA offers customized travel experiences for all kinds of travelers — students on IV, honeymooners, families, and women-only groups seeking empowerment and fun.</p>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-grid">
+        <img src="images/about1.png" alt="About 1">
+        <img src="images/about2.png" alt="About 2">
+        <img src="images/about3.png" alt="About 3">
+        <img src="images/about4.png" alt="About 4">
+        <img src="images/about5.png" alt="About 5">
+        <img src="images/about6.png" alt="About 6">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tour Packages Section -->
+<section id="tours" class="tour-section">
+  <h1 class="section-heading">Our Tour Packages</h1>
+  
+  <!-- Ladies Special Packages -->
+  <div class="package-category">
+    <h2 class="category-heading">👑 Ladies Special Packages</h2>
+    <div class="tour-grid">
+      <div class="tour-card ladies-card">
+        <div class="package-badge">Ladies Only</div>
+        <img src="images/mysore.jpg" alt="Mysore Palace">
+        <h3>Mysore Palace Adventure</h3>
+        <p class="package-dates">📅 March 15-16, 2025</p>
+        <p>2 Days / 1 Night</p>
+        <p><strong>From ₹4,999</strong></p>
+        <a href="https://wa.me/917025595098?text=Hi! I'm interested in the Ladies Special Mysore Palace Adventure (March 15-16, 2025). Can you provide more details about this package?" class="book-btn" target="_blank">Book Now</a>
+      </div>
+
+      <div class="tour-card ladies-card">
+        <div class="package-badge">Ladies Only</div>
+        <img src="images/goa.jpg" alt="Goa Beach">
+        <h3>Goa Beach Getaway</h3>
+        <p class="package-dates">📅 April 5-7, 2025</p>
+        <p>3 Days / 2 Nights</p>
+        <p><strong>From ₹6,999</strong></p>
+        <a href="https://wa.me/917025595098?text=Hi! I'm interested in the Ladies Special Goa Beach Getaway (April 5-7, 2025). Can you provide more details about this package?" class="book-btn" target="_blank">Book Now</a>
+      </div>
+
+      <div class="tour-card ladies-card">
+        <div class="package-badge">Ladies Only</div>
+        <img src="images/wayanad.jpg" alt="Wayanad Nature">
+        <h3>Wayanad Nature Trip</h3>
+        <p class="package-dates">📅 May 10-13, 2025</p>
+        <p>4 Days / 3 Nights</p>
+        <p><strong>From ₹8,999</strong></p>
+        <a href="https://wa.me/917025595098?text=Hi! I'm interested in the Ladies Special Wayanad Nature Trip (May 10-13, 2025). Can you provide more details about this package?" class="book-btn" target="_blank">Book Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Regular Packages -->
+  <div class="package-category">
+    <h2 class="category-heading">🌟 Regular Packages</h2>
+    <div class="tour-grid">
+      <div class="tour-card">
+        <img src="images/mysore.jpg" alt="Mysore Palace">
+        <h3>Mysore Palace Adventure</h3>
+        <p>2 Days / 1 Night</p>
+        <p><strong>From ₹4,999</strong></p>
+        <a href="https://wa.me/917025595098?text=Hi! I'm interested in the Mysore Palace Adventure package. Can you provide more details about this trip?" class="book-btn" target="_blank">Book Now</a>
+      </div>
+
+      <div class="tour-card">
+        <img src="images/goa.jpg" alt="Goa Beach">
+        <h3>Goa Beach Getaway</h3>
+        <p>3 Days / 2 Nights</p>
+        <p><strong>From ₹6,999</strong></p>
+        <a href="https://wa.me/917025595098?text=Hi! I'm interested in the Goa Beach Getaway package. Can you provide more details about this trip?" class="book-btn" target="_blank">Book Now</a>
+      </div>
+
+      <div class="tour-card">
+        <img src="images/wayanad.jpg" alt="Wayanad Nature">
+        <h3>Wayanad Nature Trip</h3>
+        <p>4 Days / 3 Nights</p>
+        <p><strong>From ₹8,999</strong></p>
+        <a href="https://wa.me/917025595098?text=Hi! I'm interested in the Wayanad Nature Trip package. Can you provide more details about this trip?" class="book-btn" target="_blank">Book Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section id="why" class="why-section">
+  <h1 class="custom-heading">Why Choose TREKOVA?</h1>
+  <div class="why-grid">
+    <div class="why-card">
+      <span class="emoji-icon">🧭</span>
+      <h3>Expert Guides</h3>
+      <p>Authentic, local experiences with guides who know every trail, turn, and secret spot.</p>
+    </div>
+    <div class="why-card">
+      <span class="emoji-icon">💰</span>
+      <h3>Affordable Packages</h3>
+      <p>Great memories shouldn't be expensive. Our rates are pocket-friendly and honest.</p>
+    </div>
+    <div class="why-card">
+      <span class="emoji-icon">📞</span>
+      <h3>24/7 Support</h3>
+      <p>From planning to post-trip—we're always here for you, anytime, anywhere.</p>
+    </div>
+    <div class="why-card">
+      <span class="emoji-icon">🛠️</span>
+      <h3>Tailored Experiences</h3>
+      <p>We design every journey with a personal touch to suit your dreams and desires.</p>
+    </div>
+  </div>
+</section>
+
+<!-- What We Offer Section -->
+<section id="offers" class="offer-section">
+  <h2 class="custom-heading">What We Offer</h2>
+  <ul class="offer-list">
+    <li>🌸 Ladies Special Packages</li>
+    <li>👨‍👩‍👧‍👦 Family Vacation Plans</li>
+    <li>💑 Couple Packages</li>
+    <li>🧭 Customized Trips</li>
+    <li>🔥 Strangers' Camp Experiences</li>
+    <li>🎓 College IV Tours</li>
+    <li>🧳 Comprehensive Travel Services</li>
+    <li>⛰️ Trekking Adventures</li>
+  </ul>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <h2 class="custom-heading">Get In Touch</h2>
+  <div class="contact-content">
+    <div class="contact-info">
+      <div class="contact-item">
+        <span class="contact-icon">📞</span>
+        <div>
+          <h3>Call Us</h3>
+          <p>+91 7025595098</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">💬</span>
+        <div>
+          <h3>WhatsApp</h3>
+          <p>Available 24/7</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">📍</span>
+        <div>
+          <h3>Location</h3>
+          <p>Kerala, India</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="quick-contact">
+      <h3>Quick Enquiry</h3>
+      <a href="https://wa.me/917025595098?text=Hi! I'd like to know more about your travel packages. Can you help me choose the best option?" class="contact-btn" target="_blank">
+        <img src="images/whatsapp.png" alt="WhatsApp"> Start Chat
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WhatsApp Button (Fixed) -->
+<a href="https://wa.me/917025595098" class="whatsapp-button fixed-whatsapp" target="_blank">
+  <img src="images/whatsapp.png" alt="WhatsApp Icon"> Enquire Now!
+</a>
+
+<!-- Footer -->
+<footer>
+  © 2025 TREKOVA | Beyond the Boundaries
+</footer>
+
+<!-- JavaScript -->
+<script>
+  // Mobile menu toggle function
+  function toggleMenu() {
+    const menu = document.getElementById('nav-menu');
+    menu.classList.toggle('open');
+    
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  }
+
+  // Smooth scroll to section
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+      
+      // Close mobile menu if open
+      const menu = document.getElementById('nav-menu');
+      if (menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+  }
+
+  // Update scroll progress indicator
+  function updateScrollProgress() {
+    const scrollIndicator = document.getElementById('scrollIndicator');
+    const scrollTop = window.pageYOffset;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    
+    scrollIndicator.style.width = scrollPercent + '%';
+  }
+
+  // Highlight current section in navigation
+  function updateActiveNav() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('#nav-menu a');
+    
+    let current = '';
+    
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (window.pageYOffset >= (sectionTop - 200)) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  // Close menu when clicking on a link (mobile)
+  document.querySelectorAll('#nav-list a').forEach(link => {
+    link.addEventListener('click', () => {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // Close menu when clicking outside (mobile)
+  document.addEventListener('click', (e) => {
+    const menu = document.getElementById('nav-menu');
+    const menuToggle = document.querySelector('.menu-toggle');
+    
+    if (!menu.contains(e.target) && !menuToggle.contains(e.target) && menu.classList.contains('open')) {
+      menu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Handle window resize
+  window.addEventListener('resize', () => {
+    const menu = document.getElementById('nav-menu');
+    if (window.innerWidth > 768 && menu.classList.contains('open')) {
+      menu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Update active navigation and scroll progress on scroll
+  window.addEventListener('scroll', () => {
+    updateActiveNav();
+    updateScrollProgress();
+  });
+
+  // Initialize
+  updateActiveNav();
+  updateScrollProgress();
+
+  // Keyboard navigation support
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      const menu = document.getElementById('nav-menu');
+      if (menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
+

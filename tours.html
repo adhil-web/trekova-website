@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tour Packages | TREKOVA</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Header and Navbar -->
+  <header>
+    <img src="images/logo.png" alt="Trekova Logo" class="logo">
+    
+    <!-- Hamburger Toggle Button -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="nav-menu">
+      <ul id="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="tours.html">Tour Packages</a></li>
+        <li><a href="why.html">Why Choose Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Tour Packages Section -->
+  <section class="tour-section">
+    <h1 class="section-heading">Our Tour Packages</h1>
+    <div class="tour-grid">
+      <div class="tour-card">
+        <img src="images/tour1.jpg" alt="Tour 1">
+        <h3>Munnar Adventure</h3>
+        <p>3 Days / 2 Nights</p>
+        <p><strong>From ₹6,999</strong></p>
+        <a href="https://wa.me/917025595098" class="book-btn" target="_blank">Book Now</a>
+      </div>
+
+      <div class="tour-card">
+        <img src="images/tour2.jpg" alt="Tour 2">
+        <h3>Alleppey Backwaters</h3>
+        <p>2 Days / 1 Night</p>
+        <p><strong>From ₹5,499</strong></p>
+        <a href="https://wa.me/917025595098" class="book-btn" target="_blank">Book Now</a>
+      </div>
+
+      <div class="tour-card">
+        <img src="images/tour3.jpg" alt="Tour 3">
+        <h3>Wayanad Nature Trip</h3>
+        <p>4 Days / 3 Nights</p>
+        <p><strong>From ₹8,999</strong></p>
+        <a href="https://wa.me/917025595098" class="book-btn" target="_blank">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 TREKOVA | Beyond the Boundaries
+  </footer>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    // Mobile menu toggle function
+    function toggleMenu() {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('open');
+      
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+    }
+
+    // Highlight current page
+    const links = document.querySelectorAll('#nav-menu a');
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    links.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+
+    // Close menu when clicking on a link (mobile)
+    document.querySelectorAll('#nav-list a').forEach(link => {
+      link.addEventListener('click', () => {
+        const menu = document.getElementById('nav-menu');
+        menu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Close menu when clicking outside (mobile)
+    document.addEventListener('click', (e) => {
+      const menu = document.getElementById('nav-menu');
+      const menuToggle = document.querySelector('.menu-toggle');
+      
+      if (!menu.contains(e.target) && !menuToggle.contains(e.target) && menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+      const menu = document.getElementById('nav-menu');
+      if (window.innerWidth > 768 && menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+
+</body>
+</html>
+

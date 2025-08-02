@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Why Choose Us | TREKOVA</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- 📱 Mobile CSS -->
+  <style>
+    @media (max-width: 768px) {
+      .why-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+      }
+
+      .offer-list {
+        padding: 0 20px;
+        font-size: 16px;
+      }
+
+      .custom-heading {
+        text-align: center;
+        font-size: 28px;
+        padding: 0 10px;
+      }
+
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1100;
+      }
+
+      .menu-toggle div {
+        width: 25px;
+        height: 3px;
+        background-color: #000;
+        margin: 4px 0;
+      }
+
+      #nav-menu ul {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding: 10px 0;
+        z-index: 1000;
+      }
+
+      #nav-menu ul.show {
+        display: flex;
+      }
+
+      #nav-menu ul li {
+        margin: 10px 0;
+        text-align: center;
+      }
+    }
+  </style>
+
+  <!-- 🖥️ Desktop + Nav Fix CSS -->
+  <style>
+    /* Hide nav by default */
+    #nav-menu ul {
+      display: none;
+    }
+
+    /* Show nav on toggle for mobile */
+    #nav-menu ul.show {
+      display: flex;
+    }
+
+    /* Always show nav on desktop */
+    @media (min-width: 769px) {
+      .menu-toggle {
+        display: none;
+      }
+
+      #nav-menu ul {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        box-shadow: none;
+        background: none;
+        gap: 30px;
+      }
+
+      #nav-menu ul li {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Header and Navbar -->
+<header>
+  <img src="images/logo.png" alt="Trekova Logo" class="logo">
+
+  <!-- Hamburger Toggle Button -->
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="nav-menu">
+    <ul id="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="tours.html">Tour Packages</a></li>
+      <li><a href="why.html">Why Choose Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Why Choose Us Section -->
+<section class="why-section">
+  <h1 class="custom-heading">Why Choose TREKOVA?</h1>
+  <div class="why-grid">
+    <div class="why-card">
+      <span class="emoji-icon">🧭</span>
+      <h3>Expert Guides</h3>
+      <p>Authentic, local experiences with guides who know every trail, turn, and secret spot.</p>
+    </div>
+    <div class="why-card">
+      <span class="emoji-icon">💰</span>
+      <h3>Affordable Packages</h3>
+      <p>Great memories shouldn’t be expensive. Our rates are pocket-friendly and honest.</p>
+    </div>
+    <div class="why-card">
+      <span class="emoji-icon">📞</span>
+      <h3>24/7 Support</h3>
+      <p>From planning to post-trip—we’re always here for you, anytime, anywhere.</p>
+    </div>
+    <div class="why-card">
+      <span class="emoji-icon">🛠️</span>
+      <h3>Tailored Experiences</h3>
+      <p>We design every journey with a personal touch to suit your dreams and desires.</p>
+    </div>
+  </div>
+</section>
+
+<!-- What We Offer Section -->
+<section class="offer-section">
+  <h2 class="custom-heading">What We Offer</h2>
+  <ul class="offer-list">
+    <li>🌸 Ladies Special Packages</li>
+    <li>👨‍👩‍👧‍👦 Family Vacation Plans</li>
+    <li>💑 Couple Packages</li>
+    <li>🧭 Customized Trips</li>
+    <li>🔥 Strangers’ Camp Experiences</li>
+    <li>🎓 College IV Tours</li>
+    <li>🧳 Comprehensive Travel Services</li>
+    <li>⛰️ Trekking Adventures</li>
+  </ul>
+</section>
+
+<!-- Footer -->
+<footer>
+  © 2025 TREKOVA | Beyond the Boundaries
+</footer>
+
+<!-- Script -->
+<script>
+  function toggleMenu() {
+    const navList = document.getElementById('nav-list');
+    navList.classList.toggle('show');
+  }
+
+  // Highlight current page nav item automatically
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('nav a');
+    const currentPage = window.location.pathname.split('/').pop();
+
+    links.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+
